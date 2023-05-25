@@ -3,19 +3,19 @@
 /**
  * op_swap - swaps the top two elements of the stack.
  * @stack: double pointer to the head of the stack
- * @line_num: the number of the line in file
+ * @line_number: the number of the line in file
  *
  * Return: void
  */
 
-void op_swap(stack_t **stack, unsigned int line_num)
+void op_swap(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp;
 
 	/*check if stack is empty of has only element */
 	if (!stack || !(*stack) || !(*stack)->next)
 	{
-		printf("L%u: can't swap, stack too short\n", line_num);
+		printf("L%u: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -41,12 +41,12 @@ void op_swap(stack_t **stack, unsigned int line_num)
 /**
  * op_add - adds the top two elements of the stack.
  * @stack: double pointer to the head of the stack
- * @line_num: the number of the line in file
+ * @line_number: the number of the line in file
  *
  * Return: void
  */
 
-void op_add(stack_t **stack, unsigned int line_num)
+void op_add(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp;
 	int sum;
@@ -54,7 +54,7 @@ void op_add(stack_t **stack, unsigned int line_num)
 	/*check if stack is null or empty */
 	if (!stack || !(*stack) || !(*stack)->next)
 	{
-		printf("L%u: can't add, stack too short\n", line_num);
+		printf("L%u: can't add, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 

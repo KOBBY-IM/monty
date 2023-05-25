@@ -3,12 +3,12 @@
 /**
  * op_push - pushes new node to the stack
  * @stack: double pointer to the head of the stack
- * @line_num: the number of a line of the file
+ * @line_number: the number of a line of the file
  *
  * Return: void
  */
 
-void op_push(stack_t **stack, unsigned int line_num)
+void op_push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *node;
 	char *num;
@@ -25,7 +25,7 @@ void op_push(stack_t **stack, unsigned int line_num)
 	num = strtok(NULL, DELIMS);
 	if (num == NULL)
 	{
-		printf("L%u: usage: push integer\n", line_num);
+		printf("L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -43,16 +43,16 @@ void op_push(stack_t **stack, unsigned int line_num)
 /**
  * op_pall - prints all values from the stack
  * @stack: double pointer to the head of the stack
- * @line_num: the number of a line of the file
+ * @line_number: the number of a line of the file
  *
  * Return: void
  */
 
-void op_pall(stack_t **stack, unsigned int line_num)
+void op_pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp = *stack;
 
-	(void) line_num; /* ignore line number */
+	(void) line_number; /* ignore line number */
 
 	/* print vales of elements in stack and move to next element */
 	while (temp)
