@@ -18,6 +18,7 @@ void parse_commands(stack_t **stack, char *op, unsigned int line_num)
 		{"pop", op_pop},
 		{"swap", op_swap},
 		{"add", op_add},
+		{"nop", op_nop},
 		{NULL, NULL}
 	};
 

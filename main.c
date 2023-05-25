@@ -1,5 +1,7 @@
 #include "monty.h"
 
+
+
 /*stack_t **global_head;  pointer to the global head of stack */
 
 /**

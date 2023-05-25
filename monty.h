@@ -1,5 +1,5 @@
-#ifndef __MONTY_H__
-#define __MONTY_H__
+#ifndef MONTY_H
+#define MONTY_H
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -48,7 +48,7 @@ extern stack_t **global_head;
 void global_free(void);
 
 void read_file(char *file, stack_t **stack);
-void parse_command(stack_t **stack, char *op, unsigned int line_num);
+void parse_commands(stack_t **stack, char *op, unsigned int line_num);
 
 void op_push(stack_t **stack, unsigned int line_num);
 void op_pall(stack_t **stack, unsigned int line_num);
