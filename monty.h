@@ -1,5 +1,6 @@
 #ifndef MONTY_H
 #define MONTY_H
+#define _GNU_SOURCE
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -50,13 +51,20 @@ void global_free(void);
 void read_file(char *file, stack_t **stack);
 void parse_commands(stack_t **stack, char *op, unsigned int line_num);
 
-void op_push(stack_t **stack, unsigned int line_num);
-void op_pall(stack_t **stack, unsigned int line_num);
-void op_pint(stack_t **stack, unsigned int line_num);
-void op_pop(stack_t **stack, unsigned int line_num);
-void op_swap(stack_t **stack, unsigned int line_num);
-void op_add(stack_t **stack, unsigned int line_num);
-void op_nop(stack_t **stack, unsigned int line_num);
-
+void op_push(stack_t **stack, unsigned int line_number);
+void op_pall(stack_t **stack, unsigned int line_number);
+void op_pint(stack_t **stack, unsigned int line_number);
+void op_pop(stack_t **stack, unsigned int line_number);
+void op_swap(stack_t **stack, unsigned int line_number);
+void op_add(stack_t **stack, unsigned int line_number);
+void op_nop(stack_t **stack, unsigned int line_number);
+void op_sub(stack_t **stack, unsigned int line_number);
+void op_div(stack_t **stack, unsigned int line_number);
+void op_mul(stack_t **stack, unsigned int line_number);
+void op_mod(stack_t **stack, unsigned int line_number);
+void op_pchar(stack_t **stack, unsigned int line_number);
+void op_pstr(stack_t **stack, unsigned int line_number);
+void op_rotl(stack_t **stack, unsigned int line_number);
+void op_rotr(stack_t **stack, unsigned int line_number);
 
 #endif

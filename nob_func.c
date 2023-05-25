@@ -14,7 +14,7 @@ void op_nop(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * sub - subtracts the top element of the stack from the second top element
+ * op_sub - subtracts the top element of the stack from the second top element
  * of the stack.
  * @stack: double pointer to the head of the stack
  * @line_number: the number of the line in file
@@ -22,7 +22,7 @@ void op_nop(stack_t **stack, unsigned int line_number)
  * Return: void
  */
 
-void sub(stack_t **stack, unsigned int line_number)
+void op_sub(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp;
 	int product;
